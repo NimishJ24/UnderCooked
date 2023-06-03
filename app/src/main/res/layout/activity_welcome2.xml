@@ -32,7 +32,7 @@
             android:id="@+id/frameLayout"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:layout_marginTop="80dp"
+
             app:layout_behavior="@string/appbar_scrolling_view_behavior"
 
              />
@@ -46,17 +46,7 @@
         app:theme="@style/NavigationDrawerStyle"
         app:headerLayout="@layout/drawer_header"
         app:menu="@menu/menu_drawer"/>
-    <ImageButton
-        android:id="@+id/btnBluetooth"
-        android:layout_width="5dp"
-        android:layout_height="5dp"
-        android:layout_marginLeft="300dp"
-        android:layout_marginTop="85dp"
-        android:layout_marginRight="15dp"
-        android:layout_marginBottom="600dp"
-        android:background="@drawable/round_btn"
-        android:src="@drawable/ic_bluetooth"
-        android:scaleType="fitCenter"/>
+
 
 
 

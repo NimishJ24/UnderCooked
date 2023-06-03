@@ -23,7 +23,8 @@ class Welcome2 : AppCompatActivity() {
     lateinit var toolbar: Toolbar
     lateinit var navigationView: NavigationView
     var previousMenuItem: MenuItem?=null
-    lateinit var btnBluetooth:ImageButton
+
+
 
     lateinit var settingsFrameLayout: FrameLayout
 
@@ -41,7 +42,7 @@ class Welcome2 : AppCompatActivity() {
         sharedPreferences=getSharedPreferences(getString(R.string.preference_file_name),Context.MODE_PRIVATE)
         setupToolbar()
 
-
+        openHome()
         val actionBarDrawerToggle= ActionBarDrawerToggle(this@Welcome2,drawerLayout,
             R.string.open_drawer, R.string.close_drawer
         )
@@ -58,11 +59,18 @@ class Welcome2 : AppCompatActivity() {
             when (it.itemId){
                 R.id.home
                 ->{
+                    openHome()
+                    drawerLayout.closeDrawers()
 
 
 
                 }
                 R.id.settings ->{
+                    supportFragmentManager.beginTransaction()
+                        .replace(R.id.frameLayout, SettingsFragment())
+                        .commit()
+
+                    drawerLayout.closeDrawers()
 
 
                 }
@@ -75,6 +83,9 @@ class Welcome2 : AppCompatActivity() {
             }
             return@setNavigationItemSelectedListener true
         }
+
+
+
 
 
     }
@@ -103,5 +114,13 @@ class Welcome2 : AppCompatActivity() {
         }
 
         return super.onOptionsItemSelected(item)
+    }
+    override fun onBackPressed() {
+        val frag=supportFragmentManager.findFragmentById(R.id.frameLayout)
+        when(frag) {
+            !is HomeFragment -> openHome()
+
+            else -> super.onBackPressed()
+        }
     }
 }

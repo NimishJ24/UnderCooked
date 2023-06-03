@@ -4,10 +4,67 @@
     android:layout_width="match_parent"
 
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".HomeFragment"
 
     android:background="#000000"
     android:id="@+id/settingsFrameLayout">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/llRangeH">
+        <TextView
+            android:id="@+id/txtRange"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Range"
+            android:textSize="25sp"
+            android:textColor="@color/white"
+            android:layout_margin="10dp"/>
+
+        <com.google.android.material.slider.Slider
+            android:id="@+id/sliderR"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="15dp"
+            android:valueFrom="1"
+            android:valueTo="24.0"
+            android:stepSize="1"
+            app:thumbColor="@color/primary_color"
+            app:trackColor="@color/second_color"
+            />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/llRangeH">
+        <TextView
+            android:id="@+id/txtInterval"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Interval"
+            android:textSize="25sp"
+            android:textColor="@color/white"
+            android:layout_margin="10dp"/>
+
+        <com.google.android.material.slider.Slider
+            android:id="@+id/sliderI"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+
+            android:valueFrom="1"
+            android:valueTo="24.0"
+            android:stepSize="1"
+            app:thumbColor="@color/primary_color"
+            app:trackColor="@color/second_color"
+            />
+
+    </LinearLayout>
 
 
 

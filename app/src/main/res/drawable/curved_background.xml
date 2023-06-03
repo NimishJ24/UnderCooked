@@ -4,7 +4,7 @@
         android:topLeftRadius="30dp"
         android:topRightRadius="30dp" />
 
-    <solid android:color="#27374D" /> <!-- Background color of the fragment -->
+    <solid android:color="#010029" /> <!-- Background color of the fragment -->
 
     <!-- You can also set a stroke if desired -->
     <!-- <stroke

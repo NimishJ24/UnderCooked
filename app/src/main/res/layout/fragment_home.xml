@@ -2,30 +2,28 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_alignParentBottom="true"
-    android:layout_height="350dp"
+
+    android:layout_height="match_parent"
     tools:context=".HomeFragment"
-    android:layout_marginTop="350dp"
     android:backgroundTint="#27374D"
-    android:id="@+id/frameLayout"
-    android:background="@drawable/curved_background">
+
+   >
+    <ImageButton
+        android:id="@+id/btnBluetooth"
+        android:layout_width="70dp"
+        android:layout_height="150dp"
+        android:layout_marginLeft="300dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="620dp"
+        android:background="@drawable/round_btn"
+        android:src="@drawable/ic_bluetooth"
+        android:scaleType="fitCenter"/>
+
+
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="25dp"
-        android:text="       Your BlueTooth address-(NA)"
-        android:textColor="@color/white"
-        android:id="@+id/txtFirstBAdress"
-        android:backgroundTint="@color/second_color"
-        android:background="@drawable/curved_background"/>
-    <TextView
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:text="Click on the Bluetooth botton to begin searching"
-        android:textColor="@color/white"
-        android:textAlignment="center"/>
+
 
 
 </RelativeLayout>
