@@ -1,5 +1,6 @@
 package com.plcoding.bluetoothchat.presentation.components
 
+import android.util.Log
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
@@ -24,6 +25,18 @@ fun DeviceScreen(
         modifier = Modifier
             .fillMaxSize()
     ) {
+
+        Row(
+            modifier = Modifier.fillMaxWidth(),
+            horizontalArrangement = Arrangement.SpaceAround
+        ) {
+            Button(onClick = onStartScan) {
+                Text(text = "Start")
+            }
+            Button(onClick = onStopScan) {
+                Text(text = "Stop")
+            }
+        }
         BluetoothDeviceList(
             pairedDevices = state.pairedDevices,
             scannedDevices = state.scannedDevices,
@@ -32,17 +45,6 @@ fun DeviceScreen(
                 .fillMaxWidth()
                 .weight(1f)
         )
-        Row(
-            modifier = Modifier.fillMaxWidth(),
-            horizontalArrangement = Arrangement.SpaceAround
-        ) {
-            Button(onClick = onStartScan) {
-                Text(text = "Start scan")
-            }
-            Button(onClick = onStopScan) {
-                Text(text = "Stop scan")
-            }
-        }
     }
 }
 
@@ -56,23 +58,7 @@ fun BluetoothDeviceList(
     LazyColumn(
         modifier = modifier
     ) {
-        item {
-            Text(
-                text = "Paired Devices",
-                fontWeight = FontWeight.Bold,
-                fontSize = 24.sp,
-                modifier = Modifier.padding(16.dp)
-            )
-        }
-        items(pairedDevices) { device ->
-            Text(
-                text = device.name ?: "(No name)",
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .clickable { onClick(device) }
-                    .padding(16.dp)
-            )
-        }
+
 
         item {
             Text(
@@ -85,6 +71,15 @@ fun BluetoothDeviceList(
         items(scannedDevices) { device ->
             Text(
                 text = device.name ?: "(No name)",
+
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .clickable { onClick(device) }
+                    .padding(16.dp)
+            )
+            Text(
+
+                text = device.address?: "(No address)",
                 modifier = Modifier
                     .fillMaxWidth()
                     .clickable { onClick(device) }
