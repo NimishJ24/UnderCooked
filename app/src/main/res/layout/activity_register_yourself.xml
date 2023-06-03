@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegisterYourself"
+    android:background="@color/background">
+
+    <EditText
+        android:id="@+id/etName"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/editTextbg"
+        android:drawableStart="@drawable/baseline_person_outline_24"
+        android:drawablePadding="5dp"
+        android:hint="@string/Name"
+        android:inputType="text"
+        android:textColor="@color/editText"
+        android:textStyle="italic" />
+
+    <EditText
+        android:id="@+id/etEmail"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/etName"
+        android:layout_margin="10dp"
+        android:layout_marginTop="30dp"
+        android:background="@color/editTextbg"
+        android:drawableStart="@drawable/baseline_email_24"
+        android:drawablePadding="5dp"
+        android:hint="@string/Email"
+
+        android:textColor="@color/editText"
+        android:textStyle="italic" />
+    <EditText
+        android:id="@+id/etMoblieNum"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/etEmail"
+        android:layout_margin="10dp"
+        android:layout_marginTop="30dp"
+        android:background="@color/editTextbg"
+        android:drawableStart="@drawable/mobile_number"
+        android:drawablePadding="5dp"
+        android:hint="@string/mobile_number"
+        android:inputType="phone"
+        android:maxLength="10"
+        android:textColor="@color/editText"
+        android:textStyle="italic" />
+    <EditText
+        android:id="@+id/etDeliveryAddress"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/etMoblieNum"
+        android:layout_margin="10dp"
+        android:layout_marginTop="30dp"
+        android:background="@color/editTextbg"
+        android:drawableStart="@drawable/baseline_location_on_24"
+        android:drawablePadding="5dp"
+        android:hint="@string/DeliveryAddress"
+
+        android:textColor="@color/editText"
+        android:textStyle="italic" />
+    <EditText
+        android:id="@+id/etChoosePassw"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/etDeliveryAddress"
+        android:layout_margin="10dp"
+        android:layout_marginTop="30dp"
+        android:background="@color/editTextbg"
+        android:drawableStart="@drawable/padlock"
+        android:drawablePadding="5dp"
+        android:hint="@string/ChoosePassw"
+        android:textColor="@color/editText"
+        android:textStyle="italic"
+        android:inputType="textPassword"/>
+    <EditText
+        android:id="@+id/etConfirmPassw"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/etChoosePassw"
+        android:layout_margin="10dp"
+        android:layout_marginTop="30dp"
+        android:background="@color/editTextbg"
+        android:drawableStart="@drawable/padlock"
+        android:drawablePadding="5dp"
+        android:hint="@string/ConfirmPassw"
+        android:textColor="@color/editText"
+        android:textStyle="italic"
+        android:inputType="textPassword"/>
+    <Button
+        android:id="@+id/btRegister"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_margin="10dp"
+        android:layout_below="@id/etConfirmPassw"
+        android:text="Register"
+        android:backgroundTint="@color/editText"/>
+
+
+
+
+</RelativeLayout>
